@@ -1,10 +1,32 @@
 {
   "manifest_version": 2,
   "name": "ClingyFox File Downloader",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Download files based on Regex Match and save it on Download folder using timestamp as filename with JPG extension.",
-  "permissions": ["webRequest", "downloads", "<all_urls>", "notifications"],
+  "permissions": [
+    "webRequest",
+    "downloads",
+    "notifications",
+    "<all_urls>"
+  ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "ClingyFox",
+    "default_icon": {
+      "96": "icon96.png"
+    }
+  },
+  "commands": {
+    "toggle-clingy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle ClingyFox listener"
+    }
   }
 }
